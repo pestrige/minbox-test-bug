@@ -9,11 +9,19 @@
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* PizzamanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* PizzamanTests.m */; };
 		0C80B921A6F3F58F76C31292 /* libPods-Pizzaman.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-Pizzaman.a */; };
+		0E8916D918E316769CD8C97A /* libPods-Pizzaman-MindboxNotificationServiceExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EEAE0116DD4C005A4F0B007 /* libPods-Pizzaman-MindboxNotificationServiceExtension.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		7699B88040F8A987B510C191 /* libPods-Pizzaman-PizzamanTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-Pizzaman-PizzamanTests.a */; };
+		38A000892BF59697008A4802 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A000882BF59697008A4802 /* NotificationService.swift */; };
+		38A0008D2BF59697008A4802 /* MindboxNotificationServiceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 38A000862BF59697008A4802 /* MindboxNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		38A000992BF598F5008A4802 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38A000982BF598F5008A4802 /* UserNotifications.framework */; };
+		38A0009B2BF598F5008A4802 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38A0009A2BF598F5008A4802 /* UserNotificationsUI.framework */; };
+		38A0009E2BF598F5008A4802 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A0009D2BF598F5008A4802 /* NotificationViewController.swift */; };
+		38A000A52BF598F5008A4802 /* MindboxNotificationContentExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 38A000972BF598F5008A4802 /* MindboxNotificationContentExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		768772056167752900540EC9 /* libPods-Pizzaman-MindboxNotificationContentExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EC83AA92A5F492DB2FFB927 /* libPods-Pizzaman-MindboxNotificationContentExtension.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		B7EEC77536ADC9E1C145D026 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 36F58713F4D5583C99589317 /* PrivacyInfo.xcprivacy */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,26 +32,70 @@
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
 			remoteInfo = Pizzaman;
 		};
+		38A0008B2BF59697008A4802 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38A000852BF59697008A4802;
+			remoteInfo = MindboxNotificationServiceExtension;
+		};
+		38A000A32BF598F5008A4802 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38A000962BF598F5008A4802;
+			remoteInfo = MindboxNotificationContentExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		38A0008E2BF59697008A4802 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				38A0008D2BF59697008A4802 /* MindboxNotificationServiceExtension.appex in Embed Foundation Extensions */,
+				38A000A52BF598F5008A4802 /* MindboxNotificationContentExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		00E356EE1AD99517003FC87E /* PizzamanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PizzamanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* PizzamanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PizzamanTests.m; sourceTree = "<group>"; };
+		0EC83AA92A5F492DB2FFB927 /* libPods-Pizzaman-MindboxNotificationContentExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Pizzaman-MindboxNotificationContentExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07F961A680F5B00A75B9A /* Pizzaman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pizzaman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Pizzaman/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = Pizzaman/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Pizzaman/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Pizzaman/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Pizzaman/main.m; sourceTree = "<group>"; };
-	    13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = Pizzaman/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		19F6CBCC0A4E27FBF8BF4A61 /* libPods-Pizzaman-PizzamanTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Pizzaman-PizzamanTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = Pizzaman/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		28D5905FA63ACF7B7D647DD8 /* Pods-Pizzaman-MindboxNotificationContentExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pizzaman-MindboxNotificationContentExtension.release.xcconfig"; path = "Target Support Files/Pods-Pizzaman-MindboxNotificationContentExtension/Pods-Pizzaman-MindboxNotificationContentExtension.release.xcconfig"; sourceTree = "<group>"; };
+		2EEAE0116DD4C005A4F0B007 /* libPods-Pizzaman-MindboxNotificationServiceExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Pizzaman-MindboxNotificationServiceExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		31470612F303B9C643736ECE /* Pods-Pizzaman-MindboxNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pizzaman-MindboxNotificationServiceExtension.release.xcconfig"; path = "Target Support Files/Pods-Pizzaman-MindboxNotificationServiceExtension/Pods-Pizzaman-MindboxNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
+		36F58713F4D5583C99589317 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = Pizzaman/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		38A000812BF58B51008A4802 /* Pizzaman.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = Pizzaman.entitlements; path = Pizzaman/Pizzaman.entitlements; sourceTree = "<group>"; };
+		38A000862BF59697008A4802 /* MindboxNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MindboxNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		38A000882BF59697008A4802 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		38A0008A2BF59697008A4802 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38A000922BF596EE008A4802 /* MindboxNotificationServiceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MindboxNotificationServiceExtension.entitlements; sourceTree = "<group>"; };
+		38A000972BF598F5008A4802 /* MindboxNotificationContentExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MindboxNotificationContentExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		38A000982BF598F5008A4802 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		38A0009A2BF598F5008A4802 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
+		38A0009D2BF598F5008A4802 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		38A000A22BF598F5008A4802 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38A000A92BF5991A008A4802 /* MindboxNotificationContentExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MindboxNotificationContentExtension.entitlements; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-Pizzaman.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pizzaman.debug.xcconfig"; path = "Target Support Files/Pods-Pizzaman/Pods-Pizzaman.debug.xcconfig"; sourceTree = "<group>"; };
+		3C5C83C250AD869BA726C3A1 /* Pods-Pizzaman-MindboxNotificationContentExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pizzaman-MindboxNotificationContentExtension.debug.xcconfig"; path = "Target Support Files/Pods-Pizzaman-MindboxNotificationContentExtension/Pods-Pizzaman-MindboxNotificationContentExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		4AD76912F98F13A84AAFC0EA /* Pods-Pizzaman-MindboxNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pizzaman-MindboxNotificationServiceExtension.debug.xcconfig"; path = "Target Support Files/Pods-Pizzaman-MindboxNotificationServiceExtension/Pods-Pizzaman-MindboxNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-Pizzaman.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pizzaman.release.xcconfig"; path = "Target Support Files/Pods-Pizzaman/Pods-Pizzaman.release.xcconfig"; sourceTree = "<group>"; };
-		5B7EB9410499542E8C5724F5 /* Pods-Pizzaman-PizzamanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pizzaman-PizzamanTests.debug.xcconfig"; path = "Target Support Files/Pods-Pizzaman-PizzamanTests/Pods-Pizzaman-PizzamanTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-Pizzaman.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Pizzaman.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Pizzaman/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		89C6BE57DB24E9ADA2F236DE /* Pods-Pizzaman-PizzamanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pizzaman-PizzamanTests.release.xcconfig"; path = "Target Support Files/Pods-Pizzaman-PizzamanTests/Pods-Pizzaman-PizzamanTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -52,7 +104,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7699B88040F8A987B510C191 /* libPods-Pizzaman-PizzamanTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +112,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C80B921A6F3F58F76C31292 /* libPods-Pizzaman.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38A000832BF59697008A4802 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E8916D918E316769CD8C97A /* libPods-Pizzaman-MindboxNotificationServiceExtension.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38A000942BF598F5008A4802 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38A0009B2BF598F5008A4802 /* UserNotificationsUI.framework in Frameworks */,
+				38A000992BF598F5008A4802 /* UserNotifications.framework in Frameworks */,
+				768772056167752900540EC9 /* libPods-Pizzaman-MindboxNotificationContentExtension.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +156,7 @@
 		13B07FAE1A68108700A75B9A /* Pizzaman */ = {
 			isa = PBXGroup;
 			children = (
+				38A000812BF58B51008A4802 /* Pizzaman.entitlements */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -94,6 +164,7 @@
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
+				36F58713F4D5583C99589317 /* PrivacyInfo.xcprivacy */,
 			);
 			name = Pizzaman;
 			sourceTree = "<group>";
@@ -103,9 +174,32 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				5DCACB8F33CDC322A6C60F78 /* libPods-Pizzaman.a */,
-				19F6CBCC0A4E27FBF8BF4A61 /* libPods-Pizzaman-PizzamanTests.a */,
+				2EEAE0116DD4C005A4F0B007 /* libPods-Pizzaman-MindboxNotificationServiceExtension.a */,
+				38A000982BF598F5008A4802 /* UserNotifications.framework */,
+				38A0009A2BF598F5008A4802 /* UserNotificationsUI.framework */,
+				0EC83AA92A5F492DB2FFB927 /* libPods-Pizzaman-MindboxNotificationContentExtension.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		38A000872BF59697008A4802 /* MindboxNotificationServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				38A000922BF596EE008A4802 /* MindboxNotificationServiceExtension.entitlements */,
+				38A000882BF59697008A4802 /* NotificationService.swift */,
+				38A0008A2BF59697008A4802 /* Info.plist */,
+			);
+			path = MindboxNotificationServiceExtension;
+			sourceTree = "<group>";
+		};
+		38A0009C2BF598F5008A4802 /* MindboxNotificationContentExtension */ = {
+			isa = PBXGroup;
+			children = (
+				38A000A92BF5991A008A4802 /* MindboxNotificationContentExtension.entitlements */,
+				38A0009D2BF598F5008A4802 /* NotificationViewController.swift */,
+				38A000A22BF598F5008A4802 /* Info.plist */,
+			);
+			path = MindboxNotificationContentExtension;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -121,6 +215,8 @@
 				13B07FAE1A68108700A75B9A /* Pizzaman */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* PizzamanTests */,
+				38A000872BF59697008A4802 /* MindboxNotificationServiceExtension */,
+				38A0009C2BF598F5008A4802 /* MindboxNotificationContentExtension */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
@@ -135,6 +231,8 @@
 			children = (
 				13B07F961A680F5B00A75B9A /* Pizzaman.app */,
 				00E356EE1AD99517003FC87E /* PizzamanTests.xctest */,
+				38A000862BF59697008A4802 /* MindboxNotificationServiceExtension.appex */,
+				38A000972BF598F5008A4802 /* MindboxNotificationContentExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -144,8 +242,10 @@
 			children = (
 				3B4392A12AC88292D35C810B /* Pods-Pizzaman.debug.xcconfig */,
 				5709B34CF0A7D63546082F79 /* Pods-Pizzaman.release.xcconfig */,
-				5B7EB9410499542E8C5724F5 /* Pods-Pizzaman-PizzamanTests.debug.xcconfig */,
-				89C6BE57DB24E9ADA2F236DE /* Pods-Pizzaman-PizzamanTests.release.xcconfig */,
+				4AD76912F98F13A84AAFC0EA /* Pods-Pizzaman-MindboxNotificationServiceExtension.debug.xcconfig */,
+				31470612F303B9C643736ECE /* Pods-Pizzaman-MindboxNotificationServiceExtension.release.xcconfig */,
+				3C5C83C250AD869BA726C3A1 /* Pods-Pizzaman-MindboxNotificationContentExtension.debug.xcconfig */,
+				28D5905FA63ACF7B7D647DD8 /* Pods-Pizzaman-MindboxNotificationContentExtension.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -157,12 +257,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "PizzamanTests" */;
 			buildPhases = (
-				A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */,
-				F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -185,15 +282,56 @@
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
 				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
+				38A0008E2BF59697008A4802 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				38A0008C2BF59697008A4802 /* PBXTargetDependency */,
+				38A000A42BF598F5008A4802 /* PBXTargetDependency */,
 			);
 			name = Pizzaman;
 			productName = Pizzaman;
 			productReference = 13B07F961A680F5B00A75B9A /* Pizzaman.app */;
 			productType = "com.apple.product-type.application";
+		};
+		38A000852BF59697008A4802 /* MindboxNotificationServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38A000912BF59697008A4802 /* Build configuration list for PBXNativeTarget "MindboxNotificationServiceExtension" */;
+			buildPhases = (
+				23473699A236CA304932F912 /* [CP] Check Pods Manifest.lock */,
+				38A000822BF59697008A4802 /* Sources */,
+				38A000832BF59697008A4802 /* Frameworks */,
+				38A000842BF59697008A4802 /* Resources */,
+				53F1A952A47E9ECAB1B90C3E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MindboxNotificationServiceExtension;
+			productName = MindboxNotificationServiceExtension;
+			productReference = 38A000862BF59697008A4802 /* MindboxNotificationServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		38A000962BF598F5008A4802 /* MindboxNotificationContentExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38A000A82BF598F5008A4802 /* Build configuration list for PBXNativeTarget "MindboxNotificationContentExtension" */;
+			buildPhases = (
+				546B0ECC27932D7D84F7FFFB /* [CP] Check Pods Manifest.lock */,
+				38A000932BF598F5008A4802 /* Sources */,
+				38A000942BF598F5008A4802 /* Frameworks */,
+				38A000952BF598F5008A4802 /* Resources */,
+				EB321DAAC2C7D1F20F610710 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MindboxNotificationContentExtension;
+			productName = MindboxNotificationContentExtension;
+			productReference = 38A000972BF598F5008A4802 /* MindboxNotificationContentExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -201,6 +339,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1530;
 				LastUpgradeCheck = 1210;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -209,6 +348,12 @@
 					};
 					13B07F861A680F5B00A75B9A = {
 						LastSwiftMigration = 1120;
+					};
+					38A000852BF59697008A4802 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					38A000962BF598F5008A4802 = {
+						CreatedOnToolsVersion = 15.3;
 					};
 				};
 			};
@@ -227,6 +372,8 @@
 			targets = (
 				13B07F861A680F5B00A75B9A /* Pizzaman */,
 				00E356ED1AD99517003FC87E /* PizzamanTests */,
+				38A000852BF59697008A4802 /* MindboxNotificationServiceExtension */,
+				38A000962BF598F5008A4802 /* MindboxNotificationContentExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -245,6 +392,21 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				B7EEC77536ADC9E1C145D026 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38A000842BF59697008A4802 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38A000952BF598F5008A4802 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +446,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pizzaman/Pods-Pizzaman-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */ = {
+		23473699A236CA304932F912 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -299,7 +461,46 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Pizzaman-PizzamanTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Pizzaman-MindboxNotificationServiceExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		53F1A952A47E9ECAB1B90C3E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pizzaman-MindboxNotificationServiceExtension/Pods-Pizzaman-MindboxNotificationServiceExtension-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pizzaman-MindboxNotificationServiceExtension/Pods-Pizzaman-MindboxNotificationServiceExtension-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pizzaman-MindboxNotificationServiceExtension/Pods-Pizzaman-MindboxNotificationServiceExtension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		546B0ECC27932D7D84F7FFFB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Pizzaman-MindboxNotificationContentExtension-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -328,23 +529,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Pizzaman-PizzamanTests/Pods-Pizzaman-PizzamanTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Pizzaman-PizzamanTests/Pods-Pizzaman-PizzamanTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pizzaman-PizzamanTests/Pods-Pizzaman-PizzamanTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -362,21 +546,21 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pizzaman/Pods-Pizzaman-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */ = {
+		EB321DAAC2C7D1F20F610710 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Pizzaman-PizzamanTests/Pods-Pizzaman-PizzamanTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Pizzaman-MindboxNotificationContentExtension/Pods-Pizzaman-MindboxNotificationContentExtension-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Pizzaman-PizzamanTests/Pods-Pizzaman-PizzamanTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Pizzaman-MindboxNotificationContentExtension/Pods-Pizzaman-MindboxNotificationContentExtension-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pizzaman-PizzamanTests/Pods-Pizzaman-PizzamanTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pizzaman-MindboxNotificationContentExtension/Pods-Pizzaman-MindboxNotificationContentExtension-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -399,6 +583,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		38A000822BF59697008A4802 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38A000892BF59697008A4802 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38A000932BF598F5008A4802 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38A0009E2BF598F5008A4802 /* NotificationViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -407,12 +607,21 @@
 			target = 13B07F861A680F5B00A75B9A /* Pizzaman */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
+		38A0008C2BF59697008A4802 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38A000852BF59697008A4802 /* MindboxNotificationServiceExtension */;
+			targetProxy = 38A0008B2BF59697008A4802 /* PBXContainerItemProxy */;
+		};
+		38A000A42BF598F5008A4802 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38A000962BF598F5008A4802 /* MindboxNotificationContentExtension */;
+			targetProxy = 38A000A32BF598F5008A4802 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-Pizzaman-PizzamanTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -439,7 +648,6 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-Pizzaman-PizzamanTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -465,9 +673,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-Pizzaman.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Pizzaman/Pizzaman.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KXB542L5GY;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Pizzaman/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -475,12 +686,24 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(inherited)",
+					"-DFOLLY_NO_CONFIG",
+					"-DFOLLY_MOBILE=1",
+					"-DFOLLY_USE_LIBCPP=1",
+					"-DFOLLY_CFG_NO_COROUTINES=1",
+					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
+					"-Wno-comma",
+					"-Wno-shorten-64-to-32",
+					"-fcxx-modules",
+					"-fmodules",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = YOUR_BUNDLE_ID;
 				PRODUCT_NAME = Pizzaman;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -492,24 +715,210 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-Pizzaman.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Pizzaman/Pizzaman.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KXB542L5GY;
 				INFOPLIST_FILE = Pizzaman/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(inherited)",
+					"-DNDEBUG",
+					"-DFOLLY_NO_CONFIG",
+					"-DFOLLY_MOBILE=1",
+					"-DFOLLY_USE_LIBCPP=1",
+					"-DFOLLY_CFG_NO_COROUTINES=1",
+					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
+					"-Wno-comma",
+					"-Wno-shorten-64-to-32",
+					"-fcxx-modules",
+					"-fmodules",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = YOUR_BUNDLE_ID;
 				PRODUCT_NAME = Pizzaman;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		38A0008F2BF59697008A4802 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AD76912F98F13A84AAFC0EA /* Pods-Pizzaman-MindboxNotificationServiceExtension.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = MindboxNotificationServiceExtension/MindboxNotificationServiceExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = KXB542L5GY;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MindboxNotificationServiceExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MindboxNotificationServiceExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = YOUR_BUNDLE_ID.MindboxNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		38A000902BF59697008A4802 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31470612F303B9C643736ECE /* Pods-Pizzaman-MindboxNotificationServiceExtension.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = MindboxNotificationServiceExtension/MindboxNotificationServiceExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = KXB542L5GY;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MindboxNotificationServiceExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MindboxNotificationServiceExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = YOUR_BUNDLE_ID.MindboxNotificationServiceExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		38A000A62BF598F5008A4802 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C5C83C250AD869BA726C3A1 /* Pods-Pizzaman-MindboxNotificationContentExtension.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = MindboxNotificationContentExtension/MindboxNotificationContentExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = KXB542L5GY;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MindboxNotificationContentExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MindboxNotificationContentExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = YOUR_BUNDLE_ID.MindboxNotificationContentExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		38A000A72BF598F5008A4802 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28D5905FA63ACF7B7D647DD8 /* Pods-Pizzaman-MindboxNotificationContentExtension.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = MindboxNotificationContentExtension/MindboxNotificationContentExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = KXB542L5GY;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MindboxNotificationContentExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MindboxNotificationContentExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = YOUR_BUNDLE_ID.MindboxNotificationContentExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -517,6 +926,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CC = "";
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -544,6 +954,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CXX = "";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
@@ -563,6 +974,8 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD = "";
+				LDPLUSPLUS = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -582,7 +995,10 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
+				OTHER_LDFLAGS = "$(inherited)  ";
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
+				USE_HERMES = true;
 			};
 			name = Debug;
 		};
@@ -590,6 +1006,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CC = "";
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -617,6 +1034,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				CXX = "";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "";
@@ -629,6 +1047,8 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD = "";
+				LDPLUSPLUS = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -647,7 +1067,10 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
+				OTHER_LDFLAGS = "$(inherited)  ";
+				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
+				USE_HERMES = true;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -669,6 +1092,24 @@
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
 				13B07F951A680F5B00A75B9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38A000912BF59697008A4802 /* Build configuration list for PBXNativeTarget "MindboxNotificationServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38A0008F2BF59697008A4802 /* Debug */,
+				38A000902BF59697008A4802 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38A000A82BF598F5008A4802 /* Build configuration list for PBXNativeTarget "MindboxNotificationContentExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38A000A62BF598F5008A4802 /* Debug */,
+				38A000A72BF598F5008A4802 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
